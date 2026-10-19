@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.dpapi
+*.tmp
+*.mp4
+.env*
+config.json
+fila.json
+catalogo-*
+historico-*
+candidatos-*
+roteiros-*
+proximos-videos.json
+modelos-roteiros.json
+geracao-roteiros-status.json
+cloud-status.json
