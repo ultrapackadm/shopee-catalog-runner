@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-19T16:44:50.098180-03:00",
+  "production_enabled": false,
+  "prepared_jobs": 239,
+  "video_generation_enabled": false,
+  "publication_enabled": false,
+  "review_required": true,
+  "daily_product_limit": 3,
+  "blocking_dependencies": [
+    "video_api_and_spending_not_enabled",
+    "private_video_storage_and_remote_review_not_connected",
+    "audience_peak_schedule_not_verified"
+  ],
+  "channels": {
+    "instagram": "blocked_pending_connector_and_native_disclosures",
+    "facebook": "blocked_pending_connector_and_native_disclosures",
+    "tiktok": "blocked_pending_connector_and_native_disclosures",
+    "shopee": "blocked_pending_connector_and_native_disclosures"
+  }
+}
