@@ -10,7 +10,8 @@ FILES = ('config.json', 'fila.json', 'modelos-roteiros.json',
          'roteiros-selecionados.json', 'catalogo-shopee.json',
          'historico-shopee.json', 'candidatos-shopee.json',
          'catalogo-shopee.html', 'roteiros-achadinhos-da-lu.json',
-         'proximos-videos.json', 'geracao-roteiros-status.json', 'cloud-status.json')
+         'proximos-videos.json', 'geracao-roteiros-status.json', 'cloud-status.json',
+         'production-policy.json', 'generation-ledger.json')
 HEADER = b'SHOPEE_STATE_V1\x00'
 
 

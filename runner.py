@@ -8,6 +8,7 @@ import sys
 import tempfile
 import cloud_collect
 import encrypted_state
+import production_gate
 
 
 def main():
@@ -18,6 +19,8 @@ def main():
         cloud_collect.ROOT = state
         with contextlib.redirect_stdout(io.StringIO()):
             cloud_collect.run(probe='--probe' in sys.argv)
+        readiness = production_gate.inspect(state, cloud_collect.app.now())
+        (root/'production-status.json').write_text(json.dumps(readiness,indent=2)+'\n')
         encrypted_state.seal(state, root/'catalog-state.enc')
         status = json.loads((state/'cloud-status.json').read_text())
         # Public status contains counters only, never listings, links or scripts.

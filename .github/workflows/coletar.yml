@@ -27,6 +27,8 @@ jobs:
           python-version: '3.12'
       - name: Install encryption library
         run: python -m pip install --disable-pip-version-check cryptography==50.0.2
+      - name: Check review and spending safeguards
+        run: python -m unittest discover -p 'test_*.py' -v
       - name: Collect without publishing
         env:
           ACHADINHOS_SHOPEE_CREDENTIALS: ${{ secrets.ACHADINHOS_SHOPEE_CREDENTIALS }}
@@ -42,7 +44,7 @@ jobs:
         run: |
           git config user.name 'Catalog collector'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -- catalog-state.enc runner-status.json
+          git add -- catalog-state.enc runner-status.json production-status.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh encrypted catalog state'
             git push origin HEAD:main
