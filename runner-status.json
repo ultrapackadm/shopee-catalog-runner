@@ -1,11 +1,11 @@
 {
   "status": "success",
-  "checked_at": "2026-11-01T20:34:13.333802-03:00",
-  "collected_at": "2026-11-01T15:54:54.352662-03:00",
+  "checked_at": "2026-11-02T06:26:55.446256-03:00",
+  "collected_at": "2026-11-02T06:26:36.573303-03:00",
   "offers": 250,
   "scripts": 1440,
   "pending_models": 1,
   "publishing_enabled": false,
-  "run_url": "https://github.com/ultrapackadm/shopee-catalog-runner/actions/runs/41362732220",
+  "run_url": "https://github.com/ultrapackadm/shopee-catalog-runner/actions/runs/41420645955",
   "api_authentication_test": false
 }
